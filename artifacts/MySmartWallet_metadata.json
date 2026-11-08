@@ -1,0 +1,687 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "AccountUnauthorized",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					}
+				],
+				"name": "AddressEmptyCode",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "FailedCall",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "needed",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientBalance",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidInitialization",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "NotInitializing",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "version",
+						"type": "uint64"
+					}
+				],
+				"name": "Initialized",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "entryPoint",
+				"outputs": [
+					{
+						"internalType": "contract IEntryPoint",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "execute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "target",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "data",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct MySmartWallet.Call[]",
+						"name": "calls",
+						"type": "tuple[]"
+					}
+				],
+				"name": "executeBatch",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint192",
+						"name": "key",
+						"type": "uint192"
+					}
+				],
+				"name": "getNonce",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getNonce",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "onERC1155BatchReceived",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "onERC1155Received",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "onERC721Received",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "sender",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "nonce",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "initCode",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "callData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "accountGasLimits",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "preVerificationGas",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "gasFees",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes",
+								"name": "paymasterAndData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "signature",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct PackedUserOperation",
+						"name": "userOp",
+						"type": "tuple"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "userOpHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "missingAccountFunds",
+						"type": "uint256"
+					}
+				],
+				"name": "validateUserOp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"AccountUnauthorized(address)": [
+					{
+						"details": "Unauthorized call to the account."
+					}
+				],
+				"AddressEmptyCode(address)": [
+					{
+						"details": "There's no code at `target` (it is not a contract)."
+					}
+				],
+				"FailedCall()": [
+					{
+						"details": "A call to an address target failed. The target may have reverted."
+					}
+				],
+				"InsufficientBalance(uint256,uint256)": [
+					{
+						"details": "The ETH balance of the account is not enough to perform the operation."
+					}
+				],
+				"InvalidInitialization()": [
+					{
+						"details": "The contract is already initialized."
+					}
+				],
+				"NotInitializing()": [
+					{
+						"details": "The contract is not initializing."
+					}
+				]
+			},
+			"events": {
+				"Initialized(uint64)": {
+					"details": "Triggered when the contract has been initialized or reinitialized."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Locks the implementation so nobody can initialize it. Clones don't run this constructor."
+				},
+				"entryPoint()": {
+					"details": "Canonical entry point for the account that forwards and validates user operations."
+				},
+				"getNonce()": {
+					"details": "Return the account nonce for the canonical sequence."
+				},
+				"getNonce(uint192)": {
+					"details": "Return the account nonce for a given sequence (key)."
+				},
+				"onERC721Received(address,address,uint256,bytes)": {
+					"details": "See {IERC721Receiver-onERC721Received}. Always returns `IERC721Receiver.onERC721Received.selector`."
+				},
+				"supportsInterface(bytes4)": {
+					"details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[ERC section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+				},
+				"validateUserOp((address,uint256,bytes,bytes,bytes32,uint256,bytes32,bytes,bytes),bytes32,uint256)": {
+					"details": "Validates a user operation. * MUST validate the caller is a trusted EntryPoint * MUST validate that the signature is a valid signature of the userOpHash, and SHOULD   return SIG_VALIDATION_FAILED (and not revert) on signature mismatch. Any other error MUST revert. * MUST pay the entryPoint (caller) at least the “missingAccountFunds” (which might   be zero, in case the current account’s deposit is high enough) Returns an encoded packed validation data that is composed of the following elements: - `authorizer` (`address`): 0 for success, 1 for failure, otherwise the address of an authorizer contract - `validUntil` (`uint48`): The UserOp is valid only up to this time. Zero for “infinite”. - `validAfter` (`uint48`): The UserOp is valid only after this time."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"execute(address,uint256,bytes)": {
+					"notice": "Run a single call. Callable by the EntryPoint (via a UserOp) or by the wallet itself."
+				},
+				"executeBatch((address,uint256,bytes)[])": {
+					"notice": "Run several calls atomically, e.g. approve + deposit in ONE user operation."
+				},
+				"initialize(address)": {
+					"notice": "Called once by the factory, in the same tx that creates the clone."
+				}
+			},
+			"notice": "ERC-4337 smart wallet owned by a single ECDSA key, deployed as an EIP-1167 clone. - Account  -> validateUserOp / nonce / EntryPoint plumbing (the 4337 part) - _rawSignatureValidation (below) -> \"did the owner sign this?\" - execute* -> what the wallet can actually do",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Contracts/MySmartWallet_2.sol": "MySmartWallet"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/account/Account.sol": {
+			"keccak256": "0xd5d26b36b9abf273908fb8c5fb9dc416a0cd3e148d089c38c48134f17d821155",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://600f346a0c048f0c51e85a76fd067714efe425864860f609cadf181ed3c624e3",
+				"dweb:/ipfs/QmT2T6xoVWNTEormoHj36m3J35PkZ9CDjDWozSacVCrzTU"
+			]
+		},
+		"@openzeppelin/contracts/account/utils/draft-ERC4337Utils.sol": {
+			"keccak256": "0xa7a297f556017ec9d12180b14b0cec9d18a81af5e96ee1394af8793362d4d35f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://85712f6dee4b14302c95a1e0a8d3cfe9aeeb72728ab7a543bb11bb7c7e3a872b",
+				"dweb:/ipfs/QmT6Wa9QYNcU3RQ63VNY8Eeea54vpNJbCWPkwnZtqvzfow"
+			]
+		},
+		"@openzeppelin/contracts/interfaces/draft-IERC4337.sol": {
+			"keccak256": "0xfa36bbff5908db830e3f7d7d75c69b22b85e36f6e0ac4e1070fca4813fedc32e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b17c85090175781f3375408d22a19a1d401174b32a42eebc5e37dca392a2448b",
+				"dweb:/ipfs/QmSk8H6oer1M8Mgn2ZAfNGhSBuGFRkC4Ceu9SjE5ibo7Bc"
+			]
+		},
+		"@openzeppelin/contracts/proxy/utils/Initializable.sol": {
+			"keccak256": "0xdb4d24ee2c087c391d587cd17adfe5b3f9d93b3110b1388c2ab6c7c0ad1dcd05",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ab7b6d5b9e2b88176312967fe0f0e78f3d9a1422fa5e4b64e2440c35869b5d08",
+				"dweb:/ipfs/QmXKYWWyzcLg1B2k7Sb1qkEXgLCYfXecR9wYW5obRzWP1Q"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol": {
+			"keccak256": "0x6ec6d7fce29668ede560c7d2e10f9d10de3473f5298e431e70a5767db42fa620",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ac0139e51874aeec0730d040e57993187541777eb01d5939c06d5d2b986a54e8",
+				"dweb:/ipfs/QmZbMbdPzusXuX9FGkyArV8hgzKLBZaL5RzMtCdCawtwPF"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol": {
+			"keccak256": "0x8727aacfc1f069266528eef6380f351d4d4d907b56715e799e0a6bc2d1362db7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aa0dcc5e88b91ae16e4d08c3e43af2e9cacfc98bdd9b4eb015f8b022a8efca5c",
+				"dweb:/ipfs/QmS5NxwRNqCsc6Te4a18nKU51tCh8RjkF4ATJvZms48Y4X"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+			"keccak256": "0x88cd5e3bee2e8c36b8d9058fbcaa81ad5704281b25634122234b55ea853d8055",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8dc7e7ab5b8ea36c15027ab04221b05d1c970f47a53e9fd47ead8ca665d49c7e",
+				"dweb:/ipfs/Qmeeph7fsDyfRr8vb2L8KcDEmKPb224TAayMvgqgGAnqpL"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol": {
+			"keccak256": "0x33656a25fdb287ade5fed13274e8512dddcb54758702f4360c59ce4c9138c3fa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://72973104e8680f8913d24b3f54f363487e953180b31af36ce8bd7b9605e99ed5",
+				"dweb:/ipfs/QmWzXet8qUbCwMqzpc538F3hUcjkDnEL74Afdj1thn5jTj"
+			]
+		},
+		"@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0x0fa9e0d3a859900b5a46f70a03c73adf259603d5e05027a37fe0b45529d85346",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c2add4da0240c9f2ce47649c8bb6b11b40e98cf6f88b8bdc76b2704e89391710",
+				"dweb:/ipfs/QmNQTwF2uVzu4CRtNxr8bxyP9XuW6VsZuo2Nr4KR2bZr3d"
+			]
+		},
+		"@openzeppelin/contracts/utils/Calldata.sol": {
+			"keccak256": "0xa557256a5cc28f1ff8abfdb082739dc847390c6d892f563fc071994a058f9a31",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ffd71e93eb6fae111e6bfa39303c9e09b7db7bc698170f5be627d1beb40f5462",
+				"dweb:/ipfs/QmXZmiy9FB1GRH2eWZLefaosFvSVGCBg3iVoZvWbptC3f6"
+			]
+		},
+		"@openzeppelin/contracts/utils/Errors.sol": {
+			"keccak256": "0x6afa713bfd42cf0f7656efa91201007ac465e42049d7de1d50753a373648c123",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ba1d02f4847670a1b83dec9f7d37f0b0418d6043447b69f3a29a5f9efc547fcf",
+				"dweb:/ipfs/QmQ7iH2keLNUKgq2xSWcRmuBE5eZ3F5whYAkAGzCNNoEWB"
+			]
+		},
+		"@openzeppelin/contracts/utils/LowLevelCall.sol": {
+			"keccak256": "0x6ba3db1346fc75a832aa6cd075e12f6f1fa172fa2122a020f324c319fe5be75e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ab92e9e1cb08144c43fa3a383a87c48f49a652d51156950b928c2a50bee6b3a5",
+				"dweb:/ipfs/QmWeKkKZBgLDKgRFGKCzsKybYF7C8g9ysg5kU1b1p7QFBi"
+			]
+		},
+		"@openzeppelin/contracts/utils/Packing.sol": {
+			"keccak256": "0xea9f5d3cdd11b7af7d8662a5c0e952f3666145cb4c9fe1452bd15c30abc462dd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8fcae95be7077d103530c4e6a5f1248aa64102dad62d642e2530316ab002e02c",
+				"dweb:/ipfs/QmWCr2qicfaqsTbpgq7CJhedUHcPQv34k8HNs4f5kGjVnw"
+			]
+		},
+		"@openzeppelin/contracts/utils/Panic.sol": {
+			"keccak256": "0xf7fe324703a64fc51702311dc51562d5cb1497734f074e4f483bfb6717572d7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c6a5ff4f9fd8649b7ee20800b7fa387d3465bd77cf20c2d1068cd5c98e1ed57a",
+				"dweb:/ipfs/QmVSaVJf9FXFhdYEYeCEfjMVHrxDh5qL4CGkxdMWpQCrqG"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+			"keccak256": "0xbeb5cad8aaabe0d35d2ec1a8414d91e81e5a8ca679add4cf57e2f33476861f40",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ebb272a5ee2da4e8bd5551334e0ce8dce4e9c56a04570d6bf046d260fab3116a",
+				"dweb:/ipfs/QmNw6RyM769qcqFocDq6HJMG2WiEnQbvizpRaUXsACHho2"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/signers/AbstractSigner.sol": {
+			"keccak256": "0x2e803d54b627d8ce2841c39e973f499be029a706f7157aee74adb648a27ecda9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://62197d50f708cccc7f17509f54d429eb6921416f3695f08f1178bbb9ca5ce0c5",
+				"dweb:/ipfs/QmeaUebF8obuUXwqFH4rhwTzUqa4A7z4S8TkHpWyUSrDo6"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+			"keccak256": "0x2d9dc2fe26180f74c11c13663647d38e259e45f95eb88f57b61d2160b0109d3e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://81233d1f98060113d9922180bb0f14f8335856fe9f339134b09335e9f678c377",
+				"dweb:/ipfs/QmWh6R35SarhAn4z2wH8SU456jJSYL2FgucfTFgbHJJN4E"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x8891738ffe910f0cf2da09566928589bf5d63f4524dd734fd9cedbac3274dd5c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://971f954442df5c2ef5b5ebf1eb245d7105d9fbacc7386ee5c796df1d45b21617",
+				"dweb:/ipfs/QmadRjHbkicwqwwh61raUEapaVEtaLMcYbQZWs9gUkgj3u"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0x59973a93b1f983f94e10529f46ca46544a9fec2b5f56fb1390bbe9e0dc79f857",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c55ef8f0b9719790c2ae6f81d80a59ffb89f2f0abe6bc065585bd79edce058c5",
+				"dweb:/ipfs/QmNNmCbX9NjPXKqHJN8R1WC2rNeZSQrPZLd6FF6AKLyH5Y"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+			"keccak256": "0xc8cae21c9ae4a46e5162ff9bf5b351d6fa6a6eba72d515f3bc1bdfeda7fdf083",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce830ebcf28e31643caba318996db3763c36d52cd0f23798ba83c135355d45e9",
+				"dweb:/ipfs/QmdGPcvptHN7UBCbUYBbRX3hiRVRFLRwno8b4uga6uFNif"
+			]
+		},
+		"Contracts/MySmartWallet_2.sol": {
+			"keccak256": "0x1265dc5b8a511d5f363c38f1bc46f895654e0d412566b289206fa1bb6625ed45",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://37a89630a0ae4c8294982ffb47d576ab41ab81c0032629e4c8789752fa54ea87",
+				"dweb:/ipfs/QmZwd5tUMy7D8FFGCu2BEdwx45Fhzs3tHMduEpRAXPU6D8"
+			]
+		}
+	},
+	"version": 1
+}
